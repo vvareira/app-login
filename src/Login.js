@@ -19,14 +19,16 @@ const usuarios = [
 
 export function realizarLogin(login, senha){
 
+    let resultado = 'Usuário não encontrado.';
+
     usuarios.forEach(function (usuario){
         if(usuario.login == login && usuario.senha == senha){
 
-           return 'Logado com sucesso.';
+           resultado = 'Logado com sucesso.';
         }
         
 
     });
 
-    return 'Usuário não encontrado.';
+    return resultado;
 }

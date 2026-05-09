@@ -12,4 +12,17 @@ describe('Validar login', () => {
       assert.equal(resultadoEsperado, 'Logado com sucesso.')
         
     });
+
+
+ it('Login inválido', () => {
+        const login = 'teste';
+        const senha = '123456';
+
+      const resultadoEsperado = realizarLogin(login, senha);
+
+      assert.equal(resultadoEsperado, 'Usuário não encontrado.')
+        
+    });
+
+
 });
